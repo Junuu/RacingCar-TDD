@@ -1,5 +1,1 @@
-class Input(
-    inputNames : String,
-) {
-    val result : List<String> = inputNames.split(",")
-}
+fun input(inputNames : String) = inputNames.split(",")

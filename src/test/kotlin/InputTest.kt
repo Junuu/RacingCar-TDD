@@ -8,10 +8,10 @@ class InputTest {
         val inputNames = "junuu,hong,ggam,chong"
 
         //when
-        val input = Input(inputNames)
+        val result = input(inputNames)
 
         //then
-        Assertions.assertEquals(input.result.size, 4)
-        Assertions.assertEquals(input.result, listOf("junuu", "hong", "ggam", "chong"))
+        Assertions.assertEquals(result.size, 4)
+        Assertions.assertEquals(result, listOf("junuu", "hong", "ggam", "chong"))
     }
 }
