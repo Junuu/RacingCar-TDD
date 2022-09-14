@@ -18,4 +18,17 @@ class CarTest {
         Assertions.assertEquals(car.participantName, input)
     }
 
+    @ParameterizedTest
+    @ValueSource(strings = ["junuu1","hong35"])
+    fun `참여자의 이름은 5자 이하여야 한다`(input: String){
+        //given
+
+        //when, then
+        Assertions.assertThrows(IllegalArgumentException::class.java){
+            Car(participantName = input)
+        }
+    }
+
+
+
 }
