@@ -1,8 +1,5 @@
 package logic
 
-import java.io.BufferedReader
-import java.io.InputStreamReader
-
 interface InputUtil{
     fun inputName() : String
 }

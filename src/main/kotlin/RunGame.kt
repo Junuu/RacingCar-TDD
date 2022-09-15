@@ -1,12 +1,8 @@
 import car.Car
-import logic.Input
 import logic.InputUtil
 import logic.Logic
-import logic.splitName
-import move.MoveStrategy
 import view.View
 
-const val REPEAT_TIME = 5
 
 class CarGame(
     inputUtil: InputUtil,
@@ -43,5 +39,9 @@ class CarGame(
             carList.add(Car(participantName = it))
         }
         return carList
+    }
+
+    companion object{
+        const val REPEAT_TIME = 5
     }
 }
