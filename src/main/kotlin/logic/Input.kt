@@ -9,11 +9,7 @@ interface InputUtil{
 
 class Input : InputUtil {
     override fun inputName(): String {
-        lateinit var inputString : String
-        BufferedReader(InputStreamReader(System.`in`)).use{
-            inputString = it.readLine()
-        }
-        return inputString
+        return readLine() ?: throw IllegalArgumentException()
     }
 }
 
