@@ -1,4 +1,5 @@
 import logic.Input
+import random.Random
 
 fun main(args: Array<String>) {
     val carGame = CarGame(

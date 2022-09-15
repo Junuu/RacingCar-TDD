@@ -1,10 +1,10 @@
+package random
+
 import java.security.SecureRandom
 
 interface RandomUtil {
     fun generateNumber(): Int
 }
-
-
 
 class Random : RandomUtil {
     override fun generateNumber(): Int {
