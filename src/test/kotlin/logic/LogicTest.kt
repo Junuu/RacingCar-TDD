@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test
 class LogicTest {
 
     @Test
-    fun `position이 가장 높은 차가 우승한다`(){
+    fun `position  가장 높은 차가 우승한다`(){
         //given
         val hong = Car(
             participantName = "hong",

@@ -1,6 +1,7 @@
 package car
 
 import org.junit.jupiter.api.Assertions
+import org.junit.jupiter.api.Test
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.ValueSource
 
@@ -28,5 +29,19 @@ class CarTest {
         Assertions.assertThrows(IllegalArgumentException::class.java){
             Car(participantName = input)
         }
+    }
+
+    @Test
+    fun `랜덤값으로 4,5,2가 호출되면 위치는 2칸 전진해야 한다`(){
+        //given
+        val car = Car(participantName = "junuu")
+
+        //when
+        car.move(4)
+        car.move(5)
+        car.move(2)
+
+        //then
+        Assertions.assertEquals(car.position, 2)
     }
 }

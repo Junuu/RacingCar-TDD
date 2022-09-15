@@ -13,7 +13,6 @@ class CarGame(
     private val randomUtil: RandomUtil,
 ) {
 
-    private val moveStrategy = MoveStrategy()
     private val view = View(
         logic = Logic(),
         input = inputUtil,
@@ -33,9 +32,7 @@ class CarGame(
 
     private fun carsMove(carList: List<Car>) {
         carList.forEach {
-            if (moveStrategy.isMovable(randomUtil.generateNumber())) {
-                it.position++
-            }
+            it.move(randomUtil.generateNumber())
         }
     }
 
