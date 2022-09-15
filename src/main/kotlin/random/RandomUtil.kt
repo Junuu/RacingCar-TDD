@@ -4,15 +4,15 @@ interface RandomUtil {
     fun generateNumber(): Int
 }
 
-const val UPPER_BOUND = 9
+
 
 class Random : RandomUtil {
+    override fun generateNumber(): Int {
+        return secureRandom.nextInt(UPPER_BOUND)
+    }
 
     companion object {
         private val secureRandom = SecureRandom()
-    }
-
-    override fun generateNumber(): Int {
-        return secureRandom.nextInt(UPPER_BOUND)
+        const val UPPER_BOUND = 9
     }
 }
