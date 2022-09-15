@@ -1,1 +1,0 @@
-fun input(inputNames : String) = inputNames.split(",")

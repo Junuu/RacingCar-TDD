@@ -1,7 +1,10 @@
+package logic
+
+import car.Car
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 
-class WinnerTest {
+class LogicTest {
 
     @Test
     fun `position이 가장 높은 차가 우승한다`(){
@@ -15,10 +18,10 @@ class WinnerTest {
             position = 1,
         )
         val input = listOf(junuu, hong)
-        val winnerSearch = WinnerSearch(input)
+        val logic = Logic()
 
         //when
-        val result = winnerSearch.findWinner()
+        val result = logic.findWinner(input)
 
         //then
         Assertions.assertEquals(result, listOf("hong"))
@@ -41,10 +44,10 @@ class WinnerTest {
         )
 
         val input = listOf(junuu, hong, chong)
-        val winnerSearch = WinnerSearch(input)
+        val logic = Logic()
 
         //when
-        val result = winnerSearch.findWinner()
+        val result = logic.findWinner(input)
 
         //then
         Assertions.assertEquals(result, listOf("junuu","hong"))

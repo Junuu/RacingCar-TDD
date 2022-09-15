@@ -1,8 +1,8 @@
+package move
+
 const val MOVE_THRESHOLD = 4
 
-class MoveStrategy(
-    val randomStrategy: RandomUtil
-) {
+class MoveStrategy {
 
     fun isMovable(number: Int): Boolean {
         if (number < MOVE_THRESHOLD)

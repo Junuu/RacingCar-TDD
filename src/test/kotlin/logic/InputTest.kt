@@ -1,3 +1,6 @@
+package logic
+
+import logic.splitName
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 
@@ -8,7 +11,7 @@ class InputTest {
         val inputNames = "junuu,hong,ggam,chong"
 
         //when
-        val result = input(inputNames)
+        val result = splitName(inputNames)
 
         //then
         Assertions.assertEquals(result.size, 4)

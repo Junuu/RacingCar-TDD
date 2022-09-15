@@ -1,11 +1,12 @@
-class WinnerSearch(
-    private val inputCars: List<Car>
-) {
+package logic
 
-    fun findWinner(): List<String> {
-        val maxValue = inputCars.map {
+import car.Car
+
+class Logic {
+    fun findWinner(inputCars: List<Car>): List<String> {
+        val maxValue = inputCars.maxOfOrNull {
             it.position
-        }.maxOrNull()
+        }
 
         return inputCars
             .filter { it.position == maxValue }
